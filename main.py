@@ -38,8 +38,10 @@ def validate_input():
 
     if " " in email:
         email_error = "That is not a valid email address"
+    elif email == '':
+        email_error = ""
     elif len(email) >20 or len(email) <6:
-        password1_error = "I don't like your email address because it is not between 7 and 20 characters."
+        email_error = "I don't like your email address because it is not between 7 and 20 characters."
     elif email.count('@') != 1:
         email_error = "That is not a valid email address"
     elif email.count('.') != 1:
